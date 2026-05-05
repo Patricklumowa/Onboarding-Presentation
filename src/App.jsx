@@ -22,9 +22,33 @@ const slides = [
   { Component: ClosingSlide, steps: 1 }
 ];
 
+const slideAssets = [
+  { images: [] },
+  { images: [] },
+  { images: ['/coordi.png'] },
+  { images: ['/jana.png', '/amat.png'] },
+  { images: [] },
+  { images: [] },
+  { images: [] },
+  { images: [] },
+  { images: ['/mas_gatot.png', 'https://placehold.co/400x400/08080a/ccff00?text=Q%26A'] }
+];
+
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
+  const preloadedImagesRef = useRef(new Set());
+
+  const preloadImages = (sources) => {
+    sources.forEach((src) => {
+      if (!src || preloadedImagesRef.current.has(src)) {
+        return;
+      }
+      const img = new Image();
+      img.src = src;
+      preloadedImagesRef.current.add(src);
+    });
+  };
 
   const goToNextSlide = () => {
     const slideInfo = slides[currentSlide];
@@ -64,6 +88,12 @@ function App() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentSlide, currentStep]);
+
+  useEffect(() => {
+    const currentAssets = slideAssets[currentSlide]?.images ?? [];
+    const nextAssets = slideAssets[currentSlide + 1]?.images ?? [];
+    preloadImages([...currentAssets, ...nextAssets]);
+  }, [currentSlide]);
 
   const slideWrapperRef = useRef(null);
 

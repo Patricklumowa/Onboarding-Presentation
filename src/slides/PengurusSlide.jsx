@@ -107,7 +107,7 @@ const PengurusSlide = ({ step = 0 }) => {
           <div className="absolute inset-0 bg-accent-secondary/5 opacity-0 transition-opacity"></div>
           
           <img 
-            src="/mas_gatot.png" 
+            src="/jana.png" 
             alt="Pengurus 1" 
             className="w-full aspect-[4/5] object-cover mb-6 border border-white/10"
           />
@@ -124,7 +124,7 @@ const PengurusSlide = ({ step = 0 }) => {
           <div className="absolute inset-0 bg-accent-primary/5 opacity-0 transition-opacity"></div>
           
           <img 
-            src="/mas_gatot.png" 
+            src="/amat.png" 
             alt="Pengurus 2" 
             className="w-full aspect-[4/5] object-cover mb-6 border border-white/10"
           />

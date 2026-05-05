@@ -91,7 +91,7 @@ const KoordinatorSlide = () => {
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-accent-primary"></div>
             
             <img 
-              src="/mas_gatot.png" 
+              src="/coordi.png" 
               alt="Koordinator" 
               className="w-[300px] h-[400px] md:w-[400px] md:h-[500px] object-cover"
             />
