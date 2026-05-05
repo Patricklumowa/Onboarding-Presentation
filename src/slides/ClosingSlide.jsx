@@ -172,13 +172,10 @@ const ClosingSlide = () => {
         </h2>
         
         <p className="qa-desc mt-8 font-body text-xl md:text-2xl font-bold tracking-widest uppercase">
-          Tanya sekarang atau join Slack <span className="underline decoration-wavy underline-offset-4">#ml-div-chat</span>
+          usahakan nda usah ba tanya:v <span className="underline decoration-wavy underline-offset-4">#divisi_ML</span>
         </p>
 
-        <div className="mt-16 qa-desc">
-          <button className="px-8 py-4 bg-dark-base text-accent-primary font-display font-bold text-xl uppercase rounded-full hover:scale-105 hover:shadow-[0_0_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-            Let's Build AI
-          </button>
+       <div className="mt-12 flex flex-col items-center gap-4">
         </div>
       </div>
 
